@@ -1,10 +1,17 @@
 ---
-title: "R Notebook"
-output:
+title: "Høyde og inntektsulikheter"
+bibliography: Mitt_bibliotek_arb.krav_to.bib
+output: 
   html_document:
     df_print: paged
+  # html_notebook:
+  #   df_print: paged
+  # word_document: default
+  # pdf_document: default
 ---
-```{r include=FALSE}
+ 
+
+```{r set up, echo=FALSE, include=FALSE}
 library(modelr)
 library(knitr)
 library(ggplot2)
@@ -40,6 +47,8 @@ Verdiene som kommer opp i summaryen forklarer oss forskjellige aspekter av under
 ggplot(heights, mapping =aes(x = height, y = income))+
     geom_point(color = "brown3")
 ```
+
+
 ```{r echo=FALSE}
 ggplot(heights, mapping =aes(x = height, y = income))+
     geom_point(color = "brown3")+
@@ -75,10 +84,34 @@ ggplot(heights, mapping = aes(height)) +
   inherit.aes = TRUE)
 ```
 
-```{r}
-library(lattice)
-histogram(~height | factor(sex),  type = "income", heights)
-```
+
+# Introduksjon
+
+> Høyere arbeidstakere får betydelig høyere inntekt enn lavere arbeidstakere. 
+Hva er, egentlig, årsak til dette fenomenet? 
+Forskere er fortsatt usikkre om hvilke forhåld påvirker inntektsforskjeller mest. Noen hevder at høyere arbeidstakere har bedre kognitive evner, mens andre forskere viser til de ikke kognitive eller til de sosiale evner.
+Uansett årsakssammenheng, så er lønnsforskjellen mellom høye og mindre høye arbeidstakere ganske tydelig. 
+
+Her skal vi prøve å kartlegge mulige årsak, ut fra forskningslitteratur.
+
+
+# Litteratur presentasjon
+
+> For å katrlegge årsak til lønnsforskjeller mellom høye og mindre høye arbeidstakere, har forskerne sett på de kognitive, de ikke kognitive, de sosiale egenskaper, samt famillieforhold og muskelstyrke.
+
+Kognitive egenskaper oppfatter mentale funksjoner som sansing, oppmerksomhet, hukommelse og logiske evner. @malt2019
+Ikke kognitive egenskaper reffererer til personlige egenskaper som viljestyrke, utholdenhet, karisma og lederegenskaper. Foreldrenes sosioøkonomiske egenskaper (inntekt, skolegang) samt familieforholdet (genetikk, verdier og normer) ble også vurdert som mulige årsak til ulikheter. @lundborg2014.
+Deltagelse i friidrett, skoleklubber og dating hører til sosiale aktiviteter. @cinnirella2009
+
+
+
+
+
+
+
+# Referanseliste
+
+>>>>>>> Litteratur
 
 
 ```{r echo=FALSE}
